@@ -1,6 +1,6 @@
 FROM oraclelinux:6.8
 
-MAINTAINER Alan Peng <alan_peng@wise2c.com>
+MAINTAINER Alan Peng <peng.alan@gmail.com>
 
 ENV JAVA16_HOME /root/jdk/jdk1.6.0_45
 
