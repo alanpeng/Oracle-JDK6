@@ -6,14 +6,10 @@ ENV JAVA16_HOME /root/jdk/jdk1.6.0_45
 
 USER root
 
-#Download JDK1.6
-RUN curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin > jdk-6u45-linux-x64.bin
-
-RUN mkdir /root/jdk
-
-RUN chmod +x jdk-6u45-linux-x64.bin
-
-RUN ./jdk-6u45-linux-x64.bin && \
+RUN curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin > jdk-6u45-linux-x64.bin && \
+    mkdir /root/jdk && \
+    chmod +x jdk-6u45-linux-x64.bin && \
+    ./jdk-6u45-linux-x64.bin && \
     rm jdk-6u45-linux-x64.bin && \
     mv jdk1.6.0_45 /root/jdk
 
